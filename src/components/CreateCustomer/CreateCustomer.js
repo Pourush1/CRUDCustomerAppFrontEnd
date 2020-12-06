@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import axios from 'axios'
 class CreateCustomer extends Component {
   constructor(props) {
     super(props)
@@ -20,6 +20,17 @@ class CreateCustomer extends Component {
   onSubmit = e => {
     console.log(`Customer name: ${this.state.customerName}`)
     console.log(`Customer address: ${this.state.customerAddress}`)
+
+    const newCustomer = {
+      customerName: this.state.customerName,
+      customerAddress: this.state.customerAddress
+    }
+
+    axios
+      .post('http://localhost:5000/add', newCustomer)
+      .then(res => console.log(res.data))
+      .catch(err => console.log('Error', err))
+
     this.setState({
       customerName: '',
       customerAddress: ''
