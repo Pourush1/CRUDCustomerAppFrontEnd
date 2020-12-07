@@ -8,7 +8,6 @@ class Customer extends React.Component {
   }
 
   deleteCustomer = id => {
-    console.log('id is' + id)
     axios
       .delete('http://localhost:5000/delete/' + id)
       .then(response => {
@@ -20,7 +19,6 @@ class Customer extends React.Component {
   }
 
   render() {
-    console.log(this.props)
     const { customerName, customerAddress, _id } = this.props.customer
     return (
       <tr>
