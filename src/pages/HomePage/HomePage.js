@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 
 import CustomerList from '../../components/CustomerList/CustomerList'
 import CreateCustomer from '../../components/CreateCustomer/CreateCustomer'
+import EditCustomer from '../../components/EditCustomer/EditCustomer'
 
 const HomePage = () => {
   return (
@@ -30,6 +31,7 @@ const HomePage = () => {
         <br />
         <Route exact path="/" component={CustomerList} />
         <Route exact path="/create" component={CreateCustomer} />
+        <Route exact path="/:id" component={EditCustomer} />
       </div>
     </Router>
   )

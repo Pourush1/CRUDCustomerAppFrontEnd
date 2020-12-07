@@ -26,7 +26,7 @@ class CustomerList extends Component {
     const { customers } = this.state
     return (
       <div>
-        <p>Welcome to Customer List Component!!</p>
+        <p>Customers Information</p>
         <table className="table table-striped" style={{ marginTop: 20 }}>
           <thead>
             <tr>

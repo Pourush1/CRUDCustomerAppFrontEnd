@@ -41,7 +41,7 @@ class CreateCustomer extends Component {
     return (
       <div style={{ marginTop: 20 }}>
         <h3>Create New Customer</h3>
-        <form onSubmit={this.onSubmit}>
+        <form>
           <div className="form-group">
             <label>Customer Name</label>
             <input
