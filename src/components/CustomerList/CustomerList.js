@@ -14,7 +14,6 @@ class CustomerList extends Component {
     axios
       .get('http://localhost:5000/customers')
       .then(res => {
-        console.log(res)
         this.setState({ customers: res.data })
       })
       .catch(err => {

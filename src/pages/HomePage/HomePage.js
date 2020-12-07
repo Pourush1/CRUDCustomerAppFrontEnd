@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
 
 import CustomerList from '../../components/CustomerList/CustomerList'
 import CreateCustomer from '../../components/CreateCustomer/CreateCustomer'
@@ -29,9 +29,11 @@ const HomePage = () => {
           </div>
         </nav>
         <br />
-        <Route exact path="/" component={CustomerList} />
-        <Route exact path="/create" component={CreateCustomer} />
-        <Route exact path="/:id" component={EditCustomer} />
+        <Switch>
+          <Route exact path="/" component={CustomerList} />
+          <Route exact path="/create" component={CreateCustomer} />
+          <Route exact path="/:id" component={EditCustomer} />
+        </Switch>
       </div>
     </Router>
   )
